@@ -1,9 +1,3 @@
-data:image/svg+xml;base64,
-PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdo
-dD0iMTAwIj4KICAgIDx0ZXh0IHg9IjAiIHk9IjE1IiBmaWxsPSJibGFjayI+IEhpISB5b3UgZGVj
-b2RlZCB0aGlzISA8L3RleHQ+Cjwvc3ZnPg==
-
-
 happy.svg:
 data:image/svg+xml;base64,
 PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHhtbG5z
