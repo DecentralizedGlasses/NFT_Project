@@ -207,9 +207,3 @@ This project is licensed under the **MIT License**.
 
 ---
 
-If you'd like, I can also generate:
-
-✅ A professional GitHub banner
-✅ A deployment guide for Sepolia
-✅ A frontend template (Next.js) for minting your Mood NFTs
-
