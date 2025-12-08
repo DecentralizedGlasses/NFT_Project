@@ -3,8 +3,8 @@
 pragma solidity ^0.8.19;
 
 import {Test} from "lib/forge-std/src/Test.sol";
-import {DeployBasicNft} from "../script/DeployBasicNft.s.sol";
-import {BasicNft} from "../src/BasicNft.sol";
+import {DeployBasicNft} from "../../script/DeployBasicNft.s.sol";
+import {BasicNft} from "../../src/BasicNft.sol";
 
 contract BasicNftTest is Test {
     DeployBasicNft public deployBasicNft;
@@ -26,7 +26,8 @@ contract BasicNftTest is Test {
         string memory actualName = basicNft.name();
 
         assert(
-            keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(actualName)) //way tto check the strings are same or not
+            keccak256(abi.encodePacked(expectedName)) ==
+                keccak256(abi.encodePacked(actualName)) //way tto check the strings are same or not
         );
     }
 
@@ -35,6 +36,9 @@ contract BasicNftTest is Test {
         basicNft.mintNft(PUG);
         //to check the values of balance and checking both URI are same or not
         assert(basicNft.balanceOf(USER) == 1);
-        assert(keccak256(abi.encodePacked(PUG)) == keccak256(abi.encodePacked(basicNft.tokenURI(0))));
+        assert(
+            keccak256(abi.encodePacked(PUG)) ==
+                keccak256(abi.encodePacked(basicNft.tokenURI(0)))
+        );
     }
 }
