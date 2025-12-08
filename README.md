@@ -1,37 +1,215 @@
-happy.svg:
-data:image/svg+xml;base64,
-PHN2ZyB2aWV3Qm94PSIwIDAgMjAwIDIwMCIgd2lkdGg9IjQwMCIgaGVpZ2h0PSI0MDAiIHhtbG5z
-PSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8Y2lyY2xlIGN4PSIxMDAiIGN5PSIx
-MDAiIGZpbGw9InllbGxvdyIgcj0iNzgiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS13aWR0aD0iMyIg
-Lz4KICAgIDxnIGNsYXNzPSJleWVzIj4KICAgICAgICA8Y2lyY2xlIGN4PSI3MCIgY3k9IjgyIiBy
-PSIxMiIgLz4KICAgICAgICA8Y2lyY2xlIGN4PSIxMjciIGN5PSI4MiIgcj0iMTIiIC8+CiAgICA8
-L2c+CiAgICA8cGF0aCBkPSJtMTM2LjgxIDExNi41M2MuNjkgMjYuMTctNjQuMTEgNDItODEuNTIt
-LjczIiBzdHlsZT0iZmlsbDpub25lOyBzdHJva2U6IGJsYWNrOyBzdHJva2Utd2lkdGg6IDM7IiAv
-Pgo8L3N2Zz4=
+# 🎨 Mood NFT Collection (On-Chain SVG NFTs)
 
-sad.svg:
-data:image/svg+xml;base64,
-PHN2ZyB3aWR0aD0iMTAyNHB4IiBoZWlnaHQ9IjEwMjRweCIgdmlld0JveD0iMCAwIDEwMjQgMTAy
-NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGZpbGw9IiMz
-MzMiCiAgICAgICAgZD0iTTUxMiA2NEMyNjQuNiA2NCA2NCAyNjQuNiA2NCA1MTJzMjAwLjYgNDQ4
-IDQ0OCA0NDggNDQ4LTIwMC42IDQ0OC00NDhTNzU5LjQgNjQgNTEyIDY0em0wIDgyMGMtMjA1LjQg
-MC0zNzItMTY2LjYtMzcyLTM3MnMxNjYuNi0zNzIgMzcyLTM3MiAzNzIgMTY2LjYgMzcyIDM3Mi0x
-NjYuNiAzNzItMzcyIDM3MnoiIC8+CiAgICA8cGF0aCBmaWxsPSIjRTZFNkU2IgogICAgICAgIGQ9
-Ik01MTIgMTQwYy0yMDUuNCAwLTM3MiAxNjYuNi0zNzIgMzcyczE2Ni42IDM3MiAzNzIgMzcyIDM3
-Mi0xNjYuNiAzNzItMzcyLTE2Ni42LTM3Mi0zNzItMzcyek0yODggNDIxYTQ4LjAxIDQ4LjAxIDAg
-MCAxIDk2IDAgNDguMDEgNDguMDEgMCAwIDEtOTYgMHptMzc2IDI3MmgtNDguMWMtNC4yIDAtNy44
-LTMuMi04LjEtNy40QzYwNCA2MzYuMSA1NjIuNSA1OTcgNTEyIDU5N3MtOTIuMSAzOS4xLTk1Ljgg
-ODguNmMtLjMgNC4yLTMuOSA3LjQtOC4xIDcuNEgzNjBhOCA4IDAgMCAxLTgtOC40YzQuNC04NC4z
-IDc0LjUtMTUxLjYgMTYwLTE1MS42czE1NS42IDY3LjMgMTYwIDE1MS42YTggOCAwIDAgMS04IDgu
-NHptMjQtMjI0YTQ4LjAxIDQ4LjAxIDAgMCAxIDAtOTYgNDguMDEgNDguMDEgMCAwIDEgMCA5Nnoi
-IC8+CiAgICA8cGF0aCBmaWxsPSIjMzMzIgogICAgICAgIGQ9Ik0yODggNDIxYTQ4IDQ4IDAgMSAw
-IDk2IDAgNDggNDggMCAxIDAtOTYgMHptMjI0IDExMmMtODUuNSAwLTE1NS42IDY3LjMtMTYwIDE1
-MS42YTggOCAwIDAgMCA4IDguNGg0OC4xYzQuMiAwIDcuOC0zLjIgOC4xLTcuNCAzLjctNDkuNSA0
-NS4zLTg4LjYgOTUuOC04OC42czkyIDM5LjEgOTUuOCA4OC42Yy4zIDQuMiAzLjkgNy40IDguMSA3
-LjRINjY0YTggOCAwIDAgMCA4LTguNEM2NjcuNiA2MDAuMyA1OTcuNSA1MzMgNTEyIDUzM3ptMTI4
-LTExMmE0OCA0OCAwIDEgMCA5NiAwIDQ4IDQ4IDAgMSAwLTk2IDB6IiAvPgo8L3N2Zz4=
+This project is an **Ethereum smart contract** collection that mints **fully on-chain SVG NFTs**, where each NFT represents a *mood* (Happy or Sad).
+The NFT stores all metadata + image **100% on-chain**, with no IPFS or external servers.
 
+Built using:
 
-exampleSVG:
+* **Solidity (0.8.x)**
+* **Foundry** (forge, cast)
+* **OpenZeppelin ERC721**
+* **Base64 encoding**
+* **On-chain SVG → tokenURI generation**
 
-data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48dGV4dCB4PSIwIiB5PSIxNSIgZmlsbD0iYmxhY2siPiBIaSEgeW91IGRlY29kZWQgdGhpcyE8L3RleHQ+PC9zdmc+
+---
+
+## 🚀 Features
+
+### ✔ On-Chain SVG Images
+
+Each NFT dynamically stores its SVG inside the contract:
+
+* `HAPPY` → uses the Happy SVG URI
+* `SAD` → uses the Sad SVG URI
+
+### ✔ On-Chain Metadata
+
+`tokenURI()` returns a **Base64-encoded JSON** that includes:
+
+* NFT name
+* Description
+* Attributes
+* SVG image data
+
+### ✔ Mood Switching
+
+Every NFT has a mood stored in:
+
+```solidity
+enum Mood { HAPPY, SAD }
+mapping(uint256 => Mood) private s_tokenIdToMood;
+```
+
+When minted, each NFT starts as **HAPPY**.
+
+### ✔ Foundry Test Suite
+
+Included tests verify:
+
+* Correct SVG → Base64 → tokenURI encoding
+* Correct mood state
+* Correct minting behavior
+
+---
+
+## 📂 Project Structure
+
+```
+NFT_Project/
+│── src/
+│   ├── MoodNft.sol
+│   └── DeployMoodNft.s.sol
+│
+│── test/
+│   ├── MoodNftTest.t.sol
+│   └── DeployMoodNftTest.t.sol
+│
+│── img/
+│   ├── happy.svg
+│   └── sad.svg
+│
+│── script/
+│── broadcast/
+│── foundry.toml
+│── README.md
+```
+
+---
+
+## 🔧 Installation & Setup
+
+### 1️⃣ Install Foundry
+
+```bash
+curl -L https://foundry.paradigm.xyz | bash
+foundryup
+```
+
+### 2️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/DecentralizedGlasses/NFT_Project
+cd NFT_Project
+```
+
+### 3️⃣ Install Dependencies
+
+```bash
+forge install
+```
+
+---
+
+## 🧪 Running Tests
+
+This project includes full Foundry test coverage.
+
+Run all tests:
+
+```bash
+forge test -vvv
+```
+
+---
+
+## ▶ Deploying the Smart Contract
+
+### To Local Anvil Blockchain
+
+Start Anvil:
+
+```bash
+anvil
+```
+
+Deploy:
+
+```bash
+forge script script/DeployMoodNft.s.sol:DeployMoodNft \
+    --rpc-url http://localhost:8545 \
+    --private-key <YOUR_PRIVATE_KEY> \
+    --broadcast
+```
+
+---
+
+## 🖼 Using Your Own SVGs
+
+Place SVGs inside the `img/` folder.
+
+Convert SVG → Base64 URI:
+
+```bash
+base64 -i img/happy.svg
+```
+
+Then insert the encoded string into your contract constructor when deploying.
+
+---
+
+## 🧬 How the NFT Metadata Is Generated On-Chain
+
+The `tokenURI(uint256 tokenId)` function builds JSON like this **entirely inside Solidity**:
+
+```json
+{
+  "name": "Mood NFT",
+  "description": "An NFT that reflects the owner's mood",
+  "attributes": [{ "trait_type": "moodiness", "value": 100 }],
+  "image": "data:image/svg+xml;base64,<encodedSVG>"
+}
+```
+
+Then this JSON is Base64 encoded and returned via:
+
+```solidity
+return string(
+    abi.encodePacked(
+        "data:application/json;base64,",
+        Base64.encode(bytes(jsonData))
+    )
+);
+```
+
+Meaning the NFT image + metadata are always available without IPFS, servers, or external URLs.
+
+---
+
+## 🧰 Tools Used
+
+| Tool                     | Purpose                              |
+| ------------------------ | ------------------------------------ |
+| **Foundry (Forge/Cast)** | Smart contract development & testing |
+| **OpenZeppelin**         | ERC721 implementation                |
+| **Base64 Library**       | Encoding SVG + metadata              |
+| **Anvil**                | Local Ethereum testing node          |
+
+---
+
+## 🛠 Future Improvements
+
+* Add mood-toggle functionality
+* Add animation SVGs
+* Introduce traits, rarity, and accessories
+* Build a frontend for minting & mood switching
+
+---
+
+## 🤝 Contributing
+
+Feel free to open issues, suggest features, or submit PRs!
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+If you'd like, I can also generate:
+
+✅ A professional GitHub banner
+✅ A deployment guide for Sepolia
+✅ A frontend template (Next.js) for minting your Mood NFTs
+
